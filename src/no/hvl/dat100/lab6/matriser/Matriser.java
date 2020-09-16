@@ -5,31 +5,67 @@ public class Matriser {
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
-		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
+		int [][] mat = matrise;
+		
+		for (int i = 0; i < mat.length; i++ ) {
+			for (int j = 0; j < mat.length; j++ ) {
+				System.out.print(mat[i][j]+" ");
+			}
+			System.out.println();
+		}
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
 
-		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
-		
-	}
+
+        String out = "";
+        String part = "";
+
+        int [][] matrix = matrise;
+
+        for (int i = 0; i<matrix.length; i++) {
+            for (int j = 0; j<matrix.length; j++) {
+
+            part = Integer.toString(matrix[i][j]);
+            
+            out = out + part + " ";
+            }
+            out = out+"\n";
+        
+        
+        }
+       
+        return out;
+    }
+	
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
 		
-		// TODO
-		throw new UnsupportedOperationException("skaler ikke implementert");
-	
+		int [][] matrix = matrise;
+		int t = tall;
+
+        for (int i = 0; i<matrix.length; i++) {
+            for (int j = 0; j<matrix.length; j++) {
+            	matrix[i][j] = matrix[i][j] * t;
+           }
+            }
+        return matrix;
 	}
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
+		int [][] mata = a;
+		int [][] matb = b;
+		boolean lik = false;
 
-		// TODO
-		throw new UnsupportedOperationException("erLik ikke implementert");
+        for (int i = 0; i<mata.length; i++) {
+            for (int j = 0; j<mata.length; j++) {
+            	if (mata[i][j] == matb[i][j]) lik = true;
+           }
+            }
+        return lik;
 	}
 	
 	// e)
@@ -43,8 +79,19 @@ public class Matriser {
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
 
-		// TODO
-		throw new UnsupportedOperationException("multipliser ikke implementert");
+		int [][] mata = a;
+		int [][] matb = b;
+		int x = mata.length;
+		int y = matb.length;
+		int [][] matc = new int [x][y];
+
+        for (int i = 0; i<mata.length; i++) {
+            for (int j = 0; j<mata.length; j++) {
+            	matc[i][j] = mata[i][j] * matb[i][j];
+           }
+            }
+        return matc;
+	}
 	
 	}
-}
+
