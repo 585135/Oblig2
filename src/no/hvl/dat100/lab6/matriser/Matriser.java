@@ -78,19 +78,9 @@ public class Matriser {
 
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
-
-		int [][] mata = a;
-		int [][] matb = b;
-		int x = mata.length;
-		int y = matb.length;
-		int [][] matc = new int [x][y];
-
-        for (int i = 0; i<mata.length; i++) {
-            for (int j = 0; j<mata.length; j++) {
-            	matc[i][j] = mata[i][j] * matb[i][j];
-           }
-            }
-        return matc;
+		// TODO
+		throw new UnsupportedOperationException("multiplikasjon ikke implementert");
+		
 	}
 	
 	}
